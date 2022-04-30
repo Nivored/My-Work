@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="view.js"></script>
+    <script src="model.js"></script>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+</style>
+
+</head>
+<body>
+    
+    <div id="app"></div>
+
+    <script>
+
+        //model      
+               
+        showApp();
+        //view
+
+        //controller
+
+        function changeHp(attack) {
+            // legge til hvilken tur
+            //if sjekk for om hp er over 0
+            healthbar1 -= attack
+            
+            showApp()
+        }
+
+        function play() {
+            //var audio = new Audio('Battle.mp3');
+            audio.volume = 0.05;
+            audio.play();
+            showApp();
+        }
+
+        function mute(){
+            //var audio = new Audio('Battle.mp3');
+            audio.pause();
+            showApp();
+        }
+        function attack(index){
+            atk = listofPokemon[chosenPokemon].name + ' used ' + listofPokemon[chosenPokemon].attacks[index].name;
+            verry = 'For Veronica!';
+            healthbar1 -= listofPokemon[chosenPokemon].attacks[index].damage;
+            setTimeout(lycenAtk,timer)
+            showApp();
+        }
+       
+
+        function restartGame(){
+            dataInfo = '';
+            atk = '';
+            healthbar2= 100;
+            healthbar1= 100;
+            verry = '';
+            newPokemon = 'Char.gif';
+            verryFirst ='lycan.gif';
+            showApp();
+        }
+
+        function verrynext(){
+            nextPokemon++
+            verryFirst = verryPokemon[nextPokemon].gif;
+            healthbar1 = 100;
+            showApp();
+        }
+
+        function anotherPokemon(){
+            chosenPokemon++
+            newPokemon = listofPokemon[chosenPokemon].gif;
+            // newPokemon = 'Gengar.gif';
+            healthbar2 = 100;
+            showApp();
+        }
+
+        function lycenAtk(){
+            let data = Math.floor(Math.random() * 12) + 1;
+            if (data <= 3) dataInfo = verryPokemon[nextPokemon].name + ' used ' + verryPokemon[nextPokemon].attacks[0].name, healthbar2 -= verryPokemon[nextPokemon].attacks[0].damage;
+            else if (data >=4 && data <= 6) dataInfo = verryPokemon[nextPokemon].name + ' used ' + verryPokemon[nextPokemon].attacks[1].name, healthbar2 -= verryPokemon[nextPokemon].attacks[1].damage;
+            else if (data >=7 && data <= 9) dataInfo = verryPokemon[nextPokemon].name + ' used ' + verryPokemon[nextPokemon].attacks[2].name, healthbar2 -= verryPokemon[nextPokemon].attacks[2].damage;
+            else dataInfo = verryPokemon[nextPokemon].name + ' used ' + verryPokemon[nextPokemon].attacks[3].name, healthbar2 -= verryPokemon[nextPokemon].attacks[3].damage;
+            if(healthbar1 <= 0) healthbar1 = 0;
+            if(healthbar2 <= 0) healthbar2 = 0;
+            if(healthbar1 == 0) atk = 'Player wins';
+            if(healthbar2 == 0) dataInfo = 'Veronica wins';
+            
+            showApp();
+        }
+
+
+
+    </script>
+
+</body>
+</html>

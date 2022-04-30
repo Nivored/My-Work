@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+        margin: 0;
+        padding: 0;
+        background:url(arena.jpg);
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+
+    .sound {
+        background-color: transparent;
+        font-family: 'Press Start 2P', cursive;
+        height: 20px;
+        width: 28px;
+        
+    }
+
+    .hpBar1 {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        border: solid 3px black;
+        width: 400px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: transparent;
+        font-family: 'Press Start 2P', cursive;
+        box-shadow: 5px 5px purple;
+    }
+
+    .hpBar2 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        border: solid 3px black;
+        width: 400px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: transparent;
+        font-family: 'Press Start 2P', cursive;
+        box-shadow: 5px 5px purple;
+    }
+
+    .char {
+        position: absolute;
+        right: 50px;
+        bottom: 280px;
+        height: 270px;
+        width: 270px;
+
+    }
+
+    .lycan {
+        position: absolute;
+        left: 100px;
+        bottom: 280px;
+        height: 150px;
+        width: 150px;
+        /* transform: scaleX(-1); */
+
+    }
+
+    .earthButton {
+        position: absolute;
+        right: 20px;
+        bottom: 120px;
+        font-family: 'Press Start 2P', cursive;
+        background-color: gray;
+        color:white;
+        width:180px;
+        height:50px;
+        border-radius: 25px;
+        box-shadow: 5px 5px purple;
+        cursor: pointer;
+    }
+
+    .punchButton {
+        position: absolute;
+        right: 210px;
+        bottom: 120px;
+        font-family: 'Press Start 2P', cursive;
+        background-color: gray;
+        color:white;
+        width:180px;
+        height:50px;
+        border-radius: 25px;
+        box-shadow: 5px 5px purple;
+        cursor: pointer;
+    }
+
+    .fireButton {
+        position: absolute;
+        right: 210px;
+        bottom: 60px;
+        font-family: 'Press Start 2P', cursive;
+        background-color: gray;
+        color:white;
+        width:180px;
+        height:50px;
+        border-radius: 25px;
+        box-shadow: 5px 5px purple;
+        cursor: pointer;
+    }
+
+    .clawButton {
+        position: absolute;
+        right: 20px;
+        bottom: 60px;
+        font-family: 'Press Start 2P', cursive;
+        background-color: gray;
+        color:white;
+        width:180px;
+        height:50px;
+        border-radius: 25px;
+        box-shadow: 5px 5px purple;
+        cursor: pointer;
+        
+    }
+
+    .restart{
+        border-radius: 15px;
+        border: 2px solid black;
+        background-color: gray;
+        position: absolute;
+        left: 47%;
+
+    }
+
+    .attack{
+        border: solid gray 5px;
+        position: absolute;
+        bottom:200px;
+        right: 40px;
+        width: 250px;
+        height: 35px;
+        border-radius: 10px;
+        box-shadow: 5px 5px;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    .attack2{
+        border: solid gray 5px;
+        position: absolute;
+        bottom:200px;
+        left: 40px;
+        width: 250px;
+        height: 35px;
+        border-radius: 10px;
+        box-shadow: 5px 5px;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    .veronica{
+        font-family: 'Press Start 2P', cursive;
+        border: solid 5px gray;
+        border-radius: 10px;
+        width: 250px;
+        height: 20px;
+        position: absolute;
+        left: 40px;
+        bottom: 165px;
+        box-shadow: 5px 5px black;
+    }
+
+    .pokeball1{
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        right: 380px;
+        top: 70px;
+        cursor: pointer;
+    }
+
+    .pokeball2{
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        left: 40px;
+        top: 70px;
+        cursor: pointer;
+    }
+
+    #myProgress {
+        width: 100%;
+        background-color: #ddd;
+    }
+
+    .myBar1 {
+        border-radius: 12px;
+        width: 100%;
+        height: 30px;
+        background-color: green;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+    }
+
+    .myBar2 {
+        border-radius: 12px;
+        width: 100%;
+        height: 30px;
+        background-color: green;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+    }
