@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+img{
+    height: 150px;
+}
+
+.imgDiv{
+    text-align: center;
+}
+
+body{
+    background: url(login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(0, 255, 0);
+    
+}
+
+.spellStyle{
+    font-family: 'Press Start 2P', cursive;
+    float: left;
+    color: rgb(48, 250, 8);
+    margin-top: 10px;
+    padding-left: 50px;
+    height: 30px;
+    width: 300px;
+    text-align: center;
+}
+
+.spells{
+    margin-left: 50px;
+    float: left;
+    height: 30px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 3px 3px black;
+    font-family: 'Press Start 2P', cursive;
+    background-color: steelblue;
+}
