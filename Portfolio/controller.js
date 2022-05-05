@@ -1,7 +1,6 @@
 function changePage(side){
     model.currentPage = side;
-    updatePage();
-    showApp();
+
 }
 
 
