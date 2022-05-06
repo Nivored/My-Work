@@ -1,152 +1,137 @@
-function changePage(side){
+function changePage(side) {
     model.currentPage = side;
     updatePage();
     showApp();
 }
 
 // updatePage();
-function updatePage(){
-    if(model.currentPage == 'home') homePage();
-    if(model.currentPage == 'knight') knightA();
-    if(model.currentPage == 'sorcerer') sorcA();
-    if(model.currentPage == 'druid') DruidA();
-    if(model.currentPage == 'paladin') paladinA();
+function updatePage() {
+    if (model.currentPage == 'home') homePage();
+    if (model.currentPage == 'knight') knightA();
+    if (model.currentPage == 'sorcerer') sorcA();
+    if (model.currentPage == 'druid') DruidA();
+    if (model.currentPage == 'paladin') paladinA();
     showApp();
 }
 
-function druidRunes(){
-    let druid = Math.floor(Math.random() * druidRune.length) ;
-    if(druidRune != ''){
-        druidSpellsR = druidRune[druid];
-    }
+function druidRunes() {
+    let druid = Math.floor(Math.random() * model.spells.druid.runes.length);
+    let randomSpell = model.spells.druid.runes[druid];
+
+    druidSpellsR = randomSpell.spell;
     updatePage();
-    // showApp();
 }
 
-function druidAttacks(){
-    let druid = Math.floor(Math.random() * druidAtk.length) ;
-    if(druidAtk != ''){
-        druidSpellsA = druidAtk[druid];
-    }
+function druidAttacks() {
+    let druid = Math.floor(Math.random() * model.spells.druid.attacks.length);
+    let randomSpell = model.spells.druid.attacks[druid];
+
+    druidSpellsA = randomSpell.spell;
     updatePage();
-    // showApp();
 }
 
-function druidHealing(){
-    let druid = Math.floor(Math.random() * druidHeal.length) ;
-    if(druidHeal != ''){
-        druidSpellsH = druidHeal[druid];
-    }
+function druidHealing() {
+    let druid = Math.floor(Math.random() * model.spells.druid.healing.length);
+    let randomSpell = model.spells.druid.healing[druid];
+
+    druidSpellsH = randomSpell.spell;
     updatePage();
-    // showApp();
 }
 
-function druidSupport(){
-    let druid = Math.floor(Math.random() * druidSup.length) ;
-    if(druidSup != ''){
-        druidSpellsS = druidSup[druid];
-    }
+function druidSupport() {
+    let druid = Math.floor(Math.random() * model.spells.druid.support.length);
+    let randomSpell = model.spells.druid.support[druid];
+
+    druidSpellsS = randomSpell.spell;
     updatePage();
-    // showApp();
 }
 
-function knightAttack(){
-    let knight = Math.floor(Math.random() * knightAtk.length );
-    if (knightAtk != ''){
-        knightSpellsA = knightAtk[knight]
-    }
+function knightAttack() {
+    let knight = Math.floor(Math.random() * model.spells.knight.attacks.length);
+    let randomSpell = model.spells.knight.attacks[knight];
+
+    knightSpellsA = randomSpell.spell;
     updatePage();
-    //showApp();
 }
 
-function knightHeals(){
-    let knight = Math.floor(Math.random() * knightHeal.length );
-    if (knightHeal != ''){
-        knightSpellsH = knightHeal[knight]
-    }
+function knightHeals() {
+    let knight = Math.floor(Math.random() * model.spells.knight.healing.length);
+    let randomSpell = model.spells.knight.healing[knight];
+
+    knightSpellsH = randomSpell.spell;
     updatePage();
-    // showApp();
 }
 
-function knightSupports(){
-    let knight = Math.floor(Math.random() * knightSup.length );
-    if (knightSup != ''){
-        knightSpellsS = knightSup[knight]
-    }
+function knightSupports() {
+    let knight = Math.floor(Math.random() * model.spells.knight.support.length);
+    let randomSpell = model.spells.knight.support[knight];
+
+    knightSpellsS = randomSpell.spell;
     updatePage();
-    //showApp();
 }
 
-function paladinSupports(){
-    let paladin = Math.floor(Math.random() * paladinSup.length );
-    if (paladinSup != ''){
-        paladinSpellsS = paladinSup[paladin]
-    }
+function paladinSupports() {
+    let paladin = Math.floor(Math.random() * model.spells.paladin.support.length);
+    let randomSpell = model.spells.paladin.support[paladin];
+
+    paladinSpellsS = randomSpell.spell;
     updatePage();
-    //showApp();
 }
 
-function paladinAttacks(){
-    let paladin = Math.floor(Math.random() * paladinAtk.length );
-    if (paladinAtk != ''){
-        paladinSpellsA = paladinAtk[paladin]
-    }
+function paladinAttacks() {
+    let paladin = Math.floor(Math.random() * model.spells.paladin.attacks.length);
+    let randomSpell = model.spells.paladin.attacks[paladin];
+
+    paladinSpellsA = randomSpell.spell;
     updatePage();
-    //showApp();
 }
 
-function paladinHealing(){
-    let paladin = Math.floor(Math.random() * paladinHeal.length );
-    if (paladinHeal != ''){
-        paladinSpellsH = paladinHeal[paladin]
-    }
+function paladinHealing() {
+    let paladin = Math.floor(Math.random() * model.spells.paladin.healing.length);
+    let randomSpell = model.spells.paladin.healing[paladin];
+
+    paladinSpellsH = randomSpell.spell;
     updatePage();
-    //showApp();
 }
 
-function paladinRunes(){
-    let paladin = Math.floor(Math.random() * paladinRune.length );
-    if (paladinRune != ''){
-        paladinSpellsR = paladinRune[paladin]
-    }
+function paladinRunes() {
+    let paladin = Math.floor(Math.random() * model.spells.paladin.runes.length);
+    let randomSpell = model.spells.paladin.runes[paladin];
+
+    paladinSpellsR = randomSpell.spell;
     updatePage();
-    //showApp();
 }
 
-function sorcererRunes(){
-    let sorc = Math.floor(Math.random() * sorcererRune.length );
-    if (sorcererRune != ''){
-        sorcererSpellsR = sorcererRune[sorc]
-    }
+function sorcererRunes() {
+    let sorc = Math.floor(Math.random() * model.spells.sorcerer.runes.length);
+    let randomSpell = model.spells.sorcerer.runes[sorc];
+
+    sorcererSpellsR = randomSpell.spell;
     updatePage();
-    // showApp();
 }
 
-function sorcererAttacks(){
-    let sorc = Math.floor(Math.random() * sorcererAtk.length );
-    if (sorcererAtk != ''){
-        sorcererSpellsA = sorcererAtk[sorc]
-    }
+function sorcererAttacks() {
+    let sorc = Math.floor(Math.random() * model.spells.sorcerer.attacks.length);
+    let randomSpell = model.spells.sorcerer.attacks[sorc];
+
+    sorcererSpellsA = randomSpell.spell;
     updatePage();
-    // showApp();
 }
 
-function sorcererHealing(){
-    let sorc = Math.floor(Math.random() * sorcererHeal.length );
-    if (sorcererHeal != ''){
-        sorcererSpellsH = sorcererHeal[sorc]
-    }
+function sorcererHealing() {
+    let sorc = Math.floor(Math.random() * model.spells.sorcerer.healing.length);
+    let randomSpell = model.spells.sorcerer.healing[sorc];
+
+    sorcererSpellsH = randomSpell.spell;
     updatePage();
-    //showApp();
 }
 
-function sorcererSupports(){
-    let sorc = Math.floor(Math.random() * sorcererSup.length );
-    if (sorcererSup != ''){
-        sorcererSpellsS = sorcererSup[sorc]
-    }
+function sorcererSupports() {
+    let sorc = Math.floor(Math.random() * model.spells.sorcerer.support.length);
+    let randomSpell = model.spells.sorcerer.support[sorc];
+
+    sorcererSpellsS = randomSpell.spell;
     updatePage();
-    //showApp();
 }
 
 

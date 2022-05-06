@@ -1,91 +1,281 @@
 const model = {
     currentPage: 'home',
     view: '',
+    spells: {
+        druid: {
+            healing: [
+                { spell: "Exura sio 'Yakubu' ", healing: 70 },
+                { spell: "Exura vita", healing: 70 },
+                { spell: "Exana kor", healing: 70 },
+                { spell: "Exana flam", healing: 70 },
+                { spell: "Exana pox", healing: 70 },
+                { spell: "Exura gran", healing: 70 },
+                { spell: "Exura", healing: 70 },
+                { spell: "Exura infir", healing: 70 },
+                { spell: "Exura gran mas res", healing: 70 },
+                { spell: "Exura gran sio para", healing: 70 },
+                { spell: "Exura max vita", healing: 70 }
+            ],
+            attacks: [
+                { spell: "exori min flam" },
+                { spell: "exevo infir frigo hur" },
+                { spell: "exori vis" },
+                { spell: "utori pox" },
+                { spell: "exevo gran mas frigo" },
+                { spell: "exori flam" },
+                { spell: "exori frigo" },
+                { spell: "exevo frigo hur" },
+                { spell: "exori infir tera" },
+                { spell: "exori moe ico" },
+                { spell: "exori gran frigo" },
+                { spell: "exevo gran frigo hur" },
+                { spell: "exori gran tera" },
+                { spell: "exori tera" },
+                { spell: "exevo tera hur" },
+                { spell: "exori max frigo" },
+                { spell: "exori max tera" },
+                { spell: "exevo gran mas tera" },
+            ],
+            support: [
+                { spell: "exana vita" },
+                { spell: "utevo res ina 'Monk'" },
+                { spell: "exiva moe res" },
+                { spell: "exiva 'Yakubu'" },
+                { spell: "exevo pan" },
+                { spell: "utevo gran lux" },
+                { spell: "utani hur" },
+                { spell: "utura mas sio" },
+                { spell: "utana vid" },
+                { spell: "exani hur 'up'" },
+                { spell: "exani hur 'down'" },
+                { spell: "utevo lux" },
+                { spell: "exani tera" },
+                { spell: "utamo vita" },
+                { spell: "utani gran hur" },
+                { spell: "utevo res 'Monk'" },
+                { spell: "utevo gran res dru" },
+                { spell: "utevo vis lux" },
+            ],
+            runes: [
+                { spell: "adana mort" },
+                { spell: "adori mas frigo" },
+                { spell: "adevo ina" },
+                { spell: "adeta sio" },
+                { spell: "adana pox" },
+                { spell: "adito grav" },
+                { spell: "adito tera" },
+                { spell: "adevo grav vis" },
+                { spell: "adevo mas grav vis" },
+                { spell: "adevo mas hur" },
+                { spell: "adevo mas flam" },
+                { spell: "adevo grav flam" },
+                { spell: "adevo mas grav flam" },
+                { spell: "adori vis" },
+                { spell: "adori frigo" },
+                { spell: "adura gran" },
+                { spell: "adori min vis" },
+                { spell: "adana ani" },
+                { spell: "adevo mas pox" },
+                { spell: "adevo grav pox" },
+                { spell: "adevo mas grav pox" },
+                { spell: "adevo res flam" },
+                { spell: "adori tera" },
+                { spell: "adori mas tera" },
+                { spell: "adura vita" },
+                { spell: "adevo grav vita" },
+            ],
+        },
+        sorcerer: {
+            healing: [
+                { spell: "exana pox" },
+                { spell: "exura gran" },
+                { spell: "exura" },
+                { spell: "exura vita" },
+                { spell: "exura infir" },
+                { spell: "exura max vita" },
+            ],
+            attacks: [
+                { spell: "exori min flam" },
+                { spell: "exori infir vis" },
+                { spell: "utori mort" },
+                { spell: "exori mort" },
+                { spell: "utori vis" },
+                { spell: "exevo vis lux" },
+                { spell: "exori vis" },
+                { spell: "exevo vis hur" },
+                { spell: "exevo flam hur" },
+                { spell: "exori flam" },
+                { spell: "exevo gran vis lux" },
+                { spell: "exevo gran flam hur" },
+                { spell: "exevo gran mas flam" },
+                { spell: "exori frigo" },
+                { spell: "utori flam" },
+                { spell: "exori amp vis" },
+                { spell: "exevo gran mas vis" },
+                { spell: "exevo infir flam hur" },
+                { spell: "exori gran vis" },
+                { spell: "exori gran flam" },
+                { spell: "exori tera" },
+                { spell: "exori max vis" },
+                { spell: "exori max flam" },
+            ],
+            support: [
+                { spell: "exana vita" },
+                { spell: "exevo gran mort" },
+                { spell: "utevo res ina 'Monk'" },
+                { spell: "utori mas sio" },
+                { spell: "exori moe" },
+                { spell: "exiva moe res" },
+                { spell: "exiva 'Yakubu'" },
+                { spell: "utevo gran lux" },
+                { spell: "utani hur" },
+                { spell: "utana vid" },
+                { spell: "exani hur 'up'" },
+                { spell: "exani hur 'down'" },
+                { spell: "utevo lux" },
+                { spell: "exani tera" },
+                { spell: "utamo vita" },
+                { spell: "exori kor" },
+                { spell: "utani gran hur" },
+                { spell: "utevo res 'Monk'" },
+                { spell: "utevo gran res ven'" },
+                { spell: "utevo vis lux" },
+            ],
+            runes: [
+                { spell: "adana mort" },
+                { spell: "adito grav" },
+                { spell: "adito tera" },
+                { spell: "adevo mas vis" },
+                { spell: "adevo grav vis" },
+                { spell: "adevo mas grav vis" },
+                { spell: "adevo mas hur" },
+                { spell: "adevo mas flam" },
+                { spell: "adevo grav flam" },
+                { spell: "adevo mas grav flam" },
+                { spell: "adori flam" },
+                { spell: "adori mas flam" },
+                { spell: "adori vis" },
+                { spell: "adori min vis" },
+                { spell: "adevo grav tera" },
+                { spell: "adevo grav pox" },
+                { spell: "adevo mas grav pox" },
+                { spell: "adevo res flam" },
+                { spell: "adori tera" },
+                { spell: "adori gran mort" },
+                { spell: "adori mas vis" },
+            ],
+        },
+        paladin: {
+            healing: [
+                { spell: "exana mort" },
+                { spell: "exana pox" },
+                { spell: "exura san" },
+                { spell: "exura gran" },
+                { spell: "utura gran" },
+                { spell: "exura" },
+                { spell: "exura infir" },
+                { spell: "utura" },
+                { spell: "exura gran san" },
+            ],
+            attacks: [
+                { spell: "exevo mas san" },
+                { spell: "exori san" },
+                { spell: "exori con" },
+                { spell: "utori san" },
+                { spell: "exori gran con" },
+            ],
+            support: [
+                { spell: "exevo infir con" },
+                { spell: "exana ina" },
+                { spell: "exevo con" },
+                { spell: "exevo con flam" },
+                { spell: "exana amp res" },
+                { spell: "exeta con" },
+                { spell: "exiva moe res" },
+                { spell: "exiva 'Yakubu'" },
+                { spell: "utevo gran lux" },
+                { spell: "utani hur" },
+                { spell: "exani hur 'up'" },
+                { spell: "exani hur 'down'" },
+                { spell: "utevo lux" },
+                { spell: "exani tera" },
+                { spell: "utamo mas sio" },
+                { spell: "utito tempo san" },
+                { spell: "utevo gran res sac" },
+                { spell: "utamo tempo san" },
+            ],
+            runes: [
+                { spell: "adito grav" },
+                { spell: "adito tera" },
+                { spell: "adori san" },
+            ],
+        },
+        knight: {
+            healing: [
+                { spell: "exura infir ico" },
+                { spell: "exana kor" },
+                { spell: "exana pox" },
+                { spell: "exura med ico" },
+                { spell: "utura gran" },
+                { spell: "exura gran ico" },
+                { spell: "utura" },
+                { spell: "exura ico" },
+            ],
+            attacks: [
+                { spell: "exori gran ico" },
+                { spell: "exori" },
+                { spell: "exori ico" },
+                { spell: "exori gran" },
+                { spell: "exori min" },
+                { spell: "exori mas" },
+                { spell: "exori hur" },
+                { spell: "utori kor" },
+            ],
+            support: [
+                { spell: "utito tempo" },
+                { spell: "exeta res" },
+                { spell: "utani tempo hur" },
+                { spell: "exeta amp res" },
+                { spell: "exiva moe res" },
+                { spell: "exiva 'Yakubu'" },
+                { spell: "utevo gran lux" },
+                { spell: "utani hur" },
+                { spell: "exani hur 'up'" },
+                { spell: "exani hur 'down'" },
+                { spell: "utevo lux" },
+                { spell: "exani tera" },
+                { spell: "utamo tempo" },
+                { spell: "utevo gran res eq" },
+                { spell: "utito mas sio" },
+            ],
+        }
+    }
 
-    // data
 
-    // model.spells.druid
-
-    // spells: {
-    //     druid: [
-    //         {spell: "Exura sio", effect: 70},
-    //         {spell: "1", effect: 70},
-    //         {spell: "2", effect: 70}
-    //     ],
-    //     sorcerer: [],
-    //     paladin: [],
-    //     knight: []
-    //}
 
 }
-        //Druid
-        let druidSpellsR = '';
-        let druidSpellsA = '';
-        let druidSpellsH = '';
-        let druidSpellsS = '';
+//Druid
+let druidSpellsR = '';
+let druidSpellsA = '';
+let druidSpellsH = '';
+let druidSpellsS = '';
 
-        let druidRune = ['adana mort', 'adori mas frigo', 'adevo ina', 'adeta sio', 'adana pox', 'adito grav',
-            'adito tera', 'adevo grav vis', 'adevo mas grav vis', 'adevo mas hur', 'adevo mas flam',
-            'adevo grav flam', 'adevo mas grav flam', 'adori vis', 'adori frigo', 'adura gran', 
-            'adori min vis', 'adana ani', 'adevo mas pox', 'adevo grav pox', 'adevo mas grav pox',
-            'adevo res flam', 'adori tera', 'adori mas tera', 'adura vita', 'adevo grav vita' ];
 
-        let druidHeal = ['exana kor', 'exana flam', 'exana pox', 'exura sio "Yakubu"', 'exura gran', 'exura',
-            'exura infir', 'exura gran mas res', 'exura gran sio para', 'exura max vita', 'exura vita' ];
+//Knight
+let knightSpellsA = '';
+let knightSpellsH = '';
+let knightSpellsS = '';
 
-        let druidAtk = ['exori min flam', 'exevo infir frigo hur', 'exori vis', 'utori pox', 'exevo gran mas frigo', 'exori flam',
-            'exori frigo', 'exevo frigo hur', 'exori infir tera', 'exori moe ico', 'exori gran frigo', 'exevo gran frigo hur',
-            'exori gran tera', 'exori tera', 'exevo tera hur', 'exori max frigo', 'exori max tera', 'exevo gran mas tera' ];
 
-        let druidSup = ['exana vita', 'utevo res ina "Monk"', 'exiva moe res', 'exiva "Yakubu"', 'exevo pan',
-            'utevo gran lux', 'utani hur', 'utura mas sio', 'utana vid', 'exani hur "up"', 'exani hur "down"',
-            'utevo lux', 'exani tera', 'utamo vita', 'utani gran hur', 'utevo res "Monk"', 'utevo gran res dru', 'utevo vis lux' ];
+//Paladin
+let paladinSpellsA = '';
+let paladinSpellsH = '';
+let paladinSpellsR = '';
+let paladinSpellsS = '';
 
-            //Knight
-        let knightSpellsA = '';
-        let knightSpellsH = '';
-        let knightSpellsS = '';
 
-        let knightAtk = ['exori gran ico', 'exori', 'exori ico', 'exori gran', 'exori min', 'exori mas', 'utori kor', 'exori hur' ];
-
-        let knightHeal =['exura infir ico', 'exana kor', 'exana pox', 'exura med ico', 'utura gran', 'exura gran ico', 'utura', 'exura ico'];
-
-        let knightSup =['utito tempo', 'exeta res', 'utani tempo hur', 'exeta amp res', 'exiva moe res', 'exiva "Yakubu"', 'utevo gran lux',
-            'utani hur', 'exani hur "up"', 'exani hur "down"', 'utevo lux', 'exani tera', 'utamo tempo', 'utevo gran res eq', 'utito mas sio' ];
-
-            //Paladin
-        let paladinSpellsA = '';
-        let paladinSpellsH = '';
-        let paladinSpellsR = '';
-        let paladinSpellsS = '';
-
-        let paladinAtk = ['exevo mas san', 'exori san', 'exori con', 'utori san', 'exori gran con' ];
-
-        let paladinHeal = ['exana mort', 'exana pox', 'exura san', 'exura gran', 'utura gran', 'exura', 'exura infir', 'utura', 'exura gran san' ];
-
-        let paladinSup = ['exevo infir con', 'exana ina', 'exevo con', 'exevo con flam', 'exana amp res', 'exeta con', 'exiva moe res',
-            'exiva "Yakubu"', 'utevo gran lux', 'utani hur', 'exani hur "up"', 'exani hur "down"', 'utevo lux', 'exani tera',
-            'utamo mas sio', 'utito tempo san', 'utevo gran res sac', 'utamo tempo san' ];
-
-        let paladinRune = ['adito grav', 'adito tera', 'adori san'];
-
-            //Sorcerer
-        let sorcererSpellsA = '';
-        let sorcererSpellsH = '';
-        let sorcererSpellsR = '';
-        let sorcererSpellsS = '';
-
-        let sorcererAtk = ['exori min flam', 'exori infir vis', 'utori mort', 'exori mort', 'utori vis', 'exevo vis lux', 'exori vis', 'exevo vis hur',
-            'exevo flam hur', 'exori flam', 'exevo gran vis lux', 'exevo gran flam hur', 'exevo gran mas flam', 'exori frigo', 'utori flam', 'exori amp vis',
-            'exevo gran mas vis', 'exevo infir flam hur', 'exori gran vis', 'exori gran flam', 'exori tera', 'exori max vis', 'exori max flam' ];
-
-        let sorcererRune = ['adana mort', 'adito grav', 'adito tera', 'adevo mas vis', 'adevo grav vis', 'adevo mas grav vis', 'adevo mas hur', 'adevo mas flam',
-            'adevo grav flam', 'adevo mas grav flam', 'adori flam', 'adori mas flam', 'adori vis', 'adori min vis', 'adevo grav tera', 'adevo grav pox',
-            'adevo mas grav pox', 'adevo res flam', 'adori tera', 'adori gran mort', 'adori mas vis' ];
-
-        let sorcererSup = ['exana vita', 'exevo gran mort', 'utevo res ina "Monk"', 'utori mas sio', 'exori moe', 'exiva moe res', 'exiva "Yakubu"', 'utevo gran lux',
-            'utani hur', 'utana vid', 'exani hur "up"', 'exani hur "down"', 'utevo lux', 'exani tera', 'utamo vita', 'exori kor', 'utani gran hur', 
-            'utevo res "Monk"', 'utevo gran res ven', 'utevo vis lux' ];
-
-        let sorcererHeal = ['exana pox', 'exura gran', 'exura', 'exura infir', 'exura max vita', 'exura vita' ];
-
+//Sorcerer
+let sorcererSpellsA = '';
+let sorcererSpellsH = '';
+let sorcererSpellsR = '';
+let sorcererSpellsS = '';
