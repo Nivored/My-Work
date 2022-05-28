@@ -17,10 +17,10 @@ setTimeout(function() {
 window.addEventListener("keyup", enterKey);
 
 console.log(
-  "%cYou hacked my password!😠",
-  "color: #04ff00; font-weight: bold; font-size: 24px;"
+  "%cYou foind it :O",
+  "color: #834ee7; font-weight: bold; font-size: 24px;"
 );
-console.log("%cPassword: '" + password + "' - I wonder what it does?🤔", "color: grey");
+console.log("%cPassword: '" + password + "' - Are you strong enough to use it?", "color: grey");
 
 //init
 textarea.value = "";
