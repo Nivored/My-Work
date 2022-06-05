@@ -1,3 +1,4 @@
+//
 function $(elid) {
     return document.getElementById(elid);
   }
@@ -5,15 +6,18 @@ function $(elid) {
 var cursor;
 window.onload = init;
 
+// initelise cursor
 function init() {
   cursor = $("cursor");
   cursor.style.left = "0px";
 }
 
+// inserts line breaks before all newlines in a string
 function nl2br(txt) {
   return txt.replace(/\n/g, '');
 }
 
+// automatic type what the commands are going to show
 function typeIt(from, e) {
   e = e || window.event;
   var w = $("typer");
@@ -23,6 +27,9 @@ function typeIt(from, e) {
   }
 }
 
+// move the cursor with the arrow key's
+// keycode 37 is arrow key left and 39 is right arrow key
+// keycode is the numerical code identyfing value of a key press
 function moveIt(count, e) {
   e = e || window.event;
   var keycode = e.keyCode || e.which;
@@ -33,6 +40,7 @@ function moveIt(count, e) {
   }
 }
 
+// show console log text
 function alert(txt) {
   console.log(txt);
 }

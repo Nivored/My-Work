@@ -9,23 +9,26 @@ var pw = false;
 let pwd = false;
 var commands = [];
 
+// adds banner on load
 setTimeout(function() {
   loopLines(banner, "", 80);
   textarea.focus();
 }, 100);
 
+//event for enter key
 window.addEventListener("keyup", enterKey);
 
 console.log(
-  "%cYou foind it :O",
+  "%cDont look at my password!",
   "color: #834ee7; font-weight: bold; font-size: 24px;"
 );
-console.log("%cPassword: '" + password + "' - Are you strong enough to use it?", "color: grey");
+console.log("%cPassword: '" + password + "' - are you strong enough to use it?", "color: grey");
 
 //init
 textarea.value = "";
 command.innerHTML = textarea.value;
 
+//make enter key work
 function enterKey(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
@@ -77,6 +80,7 @@ function enterKey(e) {
   }
 }
 
+//command functions
 function commander(cmd) {
   switch (cmd.toLowerCase()) {
     case "help":
@@ -136,12 +140,14 @@ function commander(cmd) {
   }
 }
 
+//open link in a new tab
 function newTab(link) {
   setTimeout(function() {
     window.open(link, "_blank");
   }, 500);
 }
 
+// make lines show
 function addLine(text, style, time) {
   var t = "";
   for (let i = 0; i < text.length; i++) {
@@ -163,6 +169,7 @@ function addLine(text, style, time) {
   }, time);
 }
 
+//loop the lines
 function loopLines(name, style, time) {
   name.forEach(function(item, index) {
     addLine(item, style, index * time);

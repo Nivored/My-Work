@@ -2,6 +2,7 @@ var password = "mvc";
 var game = "https://nivored.github.io/My-Work/Game/index.html"
 var tibia = "https://nivored.github.io/My-Work/Tibia/index.html"
 
+//what every command shows
 whois = [
     "<br>",
     "Hey, I'm Morten!👋",
