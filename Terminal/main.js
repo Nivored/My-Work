@@ -136,6 +136,10 @@ function commander(cmd) {
         addLine("Opening Tibia...", "color2", 80);
         newTab(tibia);
     break;
+    case "shooting":
+      addLine("Opening Shooting Game...", "color2", 80);
+      newTab(shooting);
+  break;
 
   }
 }

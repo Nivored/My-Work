@@ -1,6 +1,7 @@
 var password = "mvc";
 var game = "https://nivored.github.io/My-Work/Game/index.html"
 var tibia = "https://nivored.github.io/My-Work/Tibia/index.html"
+var shooting = "https://nivored.github.io/My-Work/shooting%20game/index.html"
 
 //what every command shows
 whois = [
@@ -31,6 +32,7 @@ whois = [
     "<br>",
     'game        <a href="' + game + '" target="_blank">Game, use W A S D to move' + "</a>",
     'tibia       <a href="' + tibia + '" target="_blank">Tibia' + "</a>",
+    'shooting    <a href="' + shooting + '" target="_blank">Shooting Game' + "</a>",
     "<br>"
   ];
   

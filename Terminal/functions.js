@@ -17,7 +17,7 @@ function nl2br(txt) {
   return txt.replace(/\n/g, '');
 }
 
-// automatic type what the commands are going to show
+// what you write
 function typeIt(from, e) {
   e = e || window.event;
   var w = $("typer");
